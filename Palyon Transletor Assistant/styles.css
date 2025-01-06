@@ -1,0 +1,219 @@
+:root {
+    --google-blue: #4285F4;
+    --google-red: #DB4437;
+    --google-yellow: #F4B400;
+    --google-green: #0F9D58;
+    --google-grey: #666666;
+    --google-light-grey: #F8F9FA;
+    --border-color: #E0E0E0;
+    
+    /* 应用 Google 配色 */
+    --primary-bg: var(--google-light-grey);
+    --secondary-bg: white;
+    --accent: var(--google-blue);
+    --text: var(--google-grey);
+    --input-bg: white;
+    
+    /* 按钮悬停效果的颜色 */
+    --accent-hover: #3367D6;  /* 更深的蓝色 */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Qomolangma-Uchen Sarchung', 'Arial', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: 'Qomolangma-Uchen Sarchung', 'Arial', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.file-input-container {
+    margin-bottom: 2rem;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-family: 'Qomolangma-Uchen Sarchung', 'Arial', sans-serif;
+    font-size: 1.1rem;
+}
+
+.process-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Qomolangma-Uchen Sarchung', 'Arial', sans-serif;
+    font-size: 1.1rem;
+}
+
+.translation-container {
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.sentence-pair {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--input-bg);
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.original-text {
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.translation-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--input-bg);
+}
+
+.translation-input:focus {
+    outline: none;
+    border-color: var(--google-blue);
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 1rem;
+    color: var(--google-yellow);
+    font-weight: bold;
+    font-family: 'Qomolangma-Uchen Sarchung', 'Arial', sans-serif;
+    font-size: 1.1rem;
+}
+
+.save-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-family: 'Qomolangma-Uchen Sarchung', 'Arial', sans-serif;
+    font-size: 1.1rem;
+}
+
+/* 添加保存提示样式 */
+.save-indicator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--google-green);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: none;
+    animation: fadeOut 2s ease-in-out;
+    font-family: 'Qomolangma-Uchen Sarchung', 'Arial', sans-serif;
+    font-size: 1.1rem;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+} 
+
+/* 添加藏文字体声明 */
+@font-face {
+    font-family: 'Qomolangma-Uchen Sarchung';
+    src: url('fonts/Qomolangma-UchenSarchung.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} 
+
+/* 页脚样式 */
+.footer {
+    background-color: var(--secondary-bg);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.copyright {
+    font-family: 'Qomolangma-Uchen Sarchung', 'Arial', sans-serif;
+    color: var(--accent);
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.disclaimer {
+    font-family: 'Qomolangma-Uchen Sarchung', 'Arial', sans-serif;
+    color: var(--text);
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.disclaimer p {
+    margin: 0.5rem 0;
+}
+
+.legal-notice {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--input-bg);
+    font-size: 0.75rem;
+    line-height: 1.8;
+} 
+
+/* 修改按钮悬停效果 */
+.file-label:hover,
+.process-btn:hover,
+.save-btn:hover {
+    background-color: var(--accent-hover);
+    transition: background-color 0.2s ease;
+} 

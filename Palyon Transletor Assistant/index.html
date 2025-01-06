@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="bo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>དཔལ་ཡོན་ཡིག་སྒྱུར་རོགས་པ།|Palyon Transletor Assistant</title>
+    <link rel="preload" href="fonts/Qomolangma-UchenSarchung.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>དཔལ་ཡོན་ཡིག་སྒྱུར་རོགས་པ།</h1>
+            <div class="file-input-container">
+                <input type="file" id="fileInput" accept=".txt,.epub" class="file-input">
+                <label for="fileInput" class="file-label">ཡིག་ཆ་གདམ་གསེས།</label>
+                <button id="processBtn" class="process-btn">མགོ་བརྩམས་ཆོག</button>
+                <button id="saveBtn" class="save-btn" style="display: none;">གསོག་ཉར།</button>
+                <p class="copyright">གསལ་བཤད། ཡིག་ཆ་གདམ་གསེས་བཏང་ཚར་ན་འགྲམ་གྱི་མགོ་བརྩམས་ཆོག་དེ་ཉིད་ལ་འཇུག་དགོས།</p>
+            </div>
+        </header>
+        
+        <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+            ཡིག་ཚགས་ནང་དོན་དབྱེ་ཞིབ་བྱེད་སྒང་ཡིན། ཏོག་ཙམ་སྒུག་རོགས།
+        </div>
+        
+        <main id="translationContainer" class="translation-container">
+            <!-- 句子对会在这里动态生成 -->
+        </main>
+    </div>
+    
+    <!-- 添加页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="disclaimer">
+                <p class="legal-notice">
+                    དྲ་ཚིགས་འདི་ནི་ཡིག་སྒྱུར་བྱེད་པར་རོགས་རམ་བྱེད་པའི་ལག་ཆ་ཙམ་ཡིན། ཡིག་སྒྱུར་བ་སོ་སོའི་ཡིག་སྒྱུར་གྱི་ནང་དོན་དང་། དེ་ལས་བྱུང་བའི་ཁྲིམས་ལུགས་ཀྱི་འགན་འཁྲི་ཡོངས་རྫོགས་ཡིག་སྒྱུར་བ་རང་ཉིད་ཀྱིས་འཁུར་དགོས། དྲ་ཚིགས་འདི་དང་འབྲེལ་བ་མེད།<br>
+                    This web tool is designed solely to assist in translation work.All translation content and any resulting legal responsibilities are solely the responsibility of the individual translators.
+                   This platform bears no responsibility for such matters.
+                </p>
+                <p class="copyright">© 2024དཔལ་ཡོན་ཡིག་སྒྱུར་རོགས་པ།｜བོད་ལྗོངས་དཔལ་ཡོན་ཚན་རྩལ་ནས་བཟོས།|བོདICPགྲ་སྒྲིག202400356-10|ལག་རྩལ་པ། ཁྱུང་བོ་གངས་རྒྱན།</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
